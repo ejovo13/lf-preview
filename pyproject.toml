@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "preview"
+version = "0.1.0"
+description = ""
+authors = ["Evan Voyles <ejovo13@yahoo.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+rich = "^13.9.4"
+typer = "^0.15.1"
+
+[tool.poetry.scripts]
+preview_markdown = "preview.main:app"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
