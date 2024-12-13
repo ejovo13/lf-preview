@@ -16,8 +16,9 @@
     inherit (poetry2nix.lib.mkPoetry2Nix {inherit pkgs;}) mkPoetryApplication;
     app = mkPoetryApplication {projectDir = ./.;};
   in {
-    packages.${system}.default = app;
     formatter.${system}.default = pkgs.alejandra;
+
+    defaultPackage.${system} = app;
 
     apps.${system}.default = {
       type = "app";
